@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
         //    transform.rotation = Quaternion.Slerp(transform.rotation, tempDistance, Time.deltaTime * playerRotateSpeed);
         //}
 
-        transform.Rotate(Vector3.up, inputX * playerRotateSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * inputX * playerRotateSpeed * Time.deltaTime);
         if(inputZ !=0)
         {
-            characterController.SimpleMove(transform.forward * Time.deltaTime);
+            characterController.SimpleMove(transform.forward *inputX* Time.deltaTime);
         }
     }
 }
