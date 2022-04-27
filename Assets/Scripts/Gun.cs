@@ -50,7 +50,7 @@ public class Gun : MonoBehaviour
         {
             // need to shoot the enemy 
             var health = hitInfo.collider.GetComponent<EnemyController>();
-            Debug.Log(health);
+            //Debug.Log(health);
             if(health != null)
             {
                 health.DamageMethod(10);

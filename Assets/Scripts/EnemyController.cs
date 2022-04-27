@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log("Health :" + currentHealth);
     }
 
     public void DamageMethod(int damageAmount)
