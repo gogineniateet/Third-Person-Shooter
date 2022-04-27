@@ -1063,7 +1063,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282838436}
-  m_LocalRotation: {x: -0.011369747, y: 0.0000000010753293, z: 1.2227011e-11, w: 0.9999354}
+  m_LocalRotation: {x: -0.011369747, y: -0.0000000010753294, z: -1.2227012e-11, w: 0.9999354}
   m_LocalPosition: {x: -89.4, y: 2.02, z: -14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5044b7f11bb38ef4c9f00a8deee15c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 250
-  playerRotateSpeed: 50
+  characterController: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &317607386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   fireRate: 1
   damageRate: 1
   firePoint: {fileID: 1824678578}
-  particleSystem: {fileID: 1226012825}
+  particle: {fileID: 1226012825}
 --- !u!1001 &323430110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3150,7 +3150,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853553266}
-  m_LocalRotation: {x: -0.011369747, y: 0.0000000010753293, z: 1.2227011e-11, w: 0.9999354}
+  m_LocalRotation: {x: -0.011369747, y: -0.0000000010753294, z: -1.2227012e-11, w: 0.9999354}
   m_LocalPosition: {x: -89.4, y: 2.02, z: -14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4586,7 +4586,8 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 41cabf8e1b2bf41979caa467071a7c7b, type: 3}
   - {fileID: 8300000, guid: 53dcb87c0d58147c6a32f226285470b7, type: 3}
-  audioSource: {fileID: 1337096754}
+  - {fileID: 8300000, guid: 6083a24f81edff548a20b8473e233d00, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1001 &1381157900
 PrefabInstance:
   m_ObjectHideFlags: 0

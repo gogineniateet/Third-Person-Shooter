@@ -14,8 +14,7 @@ public class Gun : MonoBehaviour
 
     public GameObject firePoint;
     [SerializeField]
-    ParticleSystem particleSystem;
-
+    ParticleSystem particle;
 
     float timer;
 
@@ -35,13 +34,15 @@ public class Gun : MonoBehaviour
             {
                 timer = 0f;
                 ToFireGun();
+                AudioController.instance.PlayAudioClip(constants.ShootSound);
+                
             }
         }
     }
 
     private void ToFireGun()
     {
-        particleSystem.Play();
+        particle.Play();
             // add  audio source
         Debug.DrawRay(firePoint.transform.position, transform.forward * 100, Color.red, 1f);
         Ray ray = new Ray(firePoint.transform.position, transform.forward);

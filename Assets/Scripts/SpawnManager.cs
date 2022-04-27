@@ -21,6 +21,5 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemyPrefab, this.transform.position, Quaternion.identity);
             timer = 0f;
         }
-
     }
 }

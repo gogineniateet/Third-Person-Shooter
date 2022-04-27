@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public float playerSpeed;
-    public float playerRotateSpeed;
-    CharacterController characterController;
-    Animator animator;
+        
+    [SerializeField] CharacterController characterController;
+    [SerializeField] Animator animator;
 
 
     // Start is called before the first frame update
@@ -24,8 +22,8 @@ public class PlayerController : MonoBehaviour
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(inputX, 0f, inputZ);
-        characterController.SimpleMove(movement * playerSpeed * Time.deltaTime);
-
+        characterController.SimpleMove(movement * constants.playerSpeed * Time.deltaTime);
+        //AudioController.instance.PlayAudioClip(constants.WalkSound1);
         animator.SetFloat("Speed", movement.magnitude);
 
         //if (movement.magnitude > 0f)
@@ -34,7 +32,7 @@ public class PlayerController : MonoBehaviour
         //    transform.rotation = Quaternion.Slerp(transform.rotation, tempDistance, Time.deltaTime * playerRotateSpeed);
         //}
 
-        transform.Rotate(Vector3.up * inputX * playerRotateSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * inputX * constants.playerRotateSpeed * Time.deltaTime);
         if(inputZ !=0)
         {
             characterController.SimpleMove(transform.forward *inputX* Time.deltaTime);
